@@ -28,7 +28,7 @@ EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO
 SUBDIRS = src
 
 clean-local:
-	rm -rf doc
+	rm -rf doc autom4te.cache
 
 html-local:
 	doxygen Doxyfile
