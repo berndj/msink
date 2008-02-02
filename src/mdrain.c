@@ -1,9 +1,14 @@
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <getopt.h>
-#include <libgen.h>
+
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -55,10 +60,9 @@ void printUsage(char *argv[]) {
   fprintf(stderr, "  -h, --help\n");
 }
 
-#define MDRAIN_VERSION "0.1"
 
 void printVersion(char *argv[]) {
-  fprintf(stderr, "%s version %s\n", argv[0], MDRAIN_VERSION);
+  fprintf(stderr, "%s version %s\n", argv[0], VERSION);
   fprintf(stderr,"Copyright (C) 2007  Bernd Jungblut\n");
   fprintf(stderr,"This program comes with NO WARRANTY, to the extent permitted by law.\n");
   fprintf(stderr,"You may redistribute copies of this program under the terms of\n");
