@@ -1,6 +1,6 @@
 ## Process this file with automake to create Makefile.in
 
-## Makefile for Netcat.
+## Makefile for msink.
 
 ## Copyright (C) 1995, 1996, 1997, 1998, 1999, 2001, 2002 Free
 ## Software Foundation, Inc.

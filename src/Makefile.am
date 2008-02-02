@@ -1,2 +1,2 @@
-bin_PROGRAMS = mdrain
-     mdrain_SOURCES = mdrain.c
+bin_PROGRAMS = msink
+     msink_SOURCES = msink.c

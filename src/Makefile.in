@@ -30,7 +30,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = mdrain$(EXEEXT)
+bin_PROGRAMS = msink$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -43,9 +43,9 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_mdrain_OBJECTS = mdrain.$(OBJEXT)
-mdrain_OBJECTS = $(am_mdrain_OBJECTS)
-mdrain_LDADD = $(LDADD)
+am_msink_OBJECTS = msink.$(OBJEXT)
+msink_OBJECTS = $(am_msink_OBJECTS)
+msink_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I. -I$(top_builddir)@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -53,8 +53,8 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
 LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-SOURCES = $(mdrain_SOURCES)
-DIST_SOURCES = $(mdrain_SOURCES)
+SOURCES = $(msink_SOURCES)
+DIST_SOURCES = $(msink_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -142,7 +142,7 @@ sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-mdrain_SOURCES = mdrain.c
+msink_SOURCES = msink.c
 all: all-am
 
 .SUFFIXES:
@@ -199,9 +199,9 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-mdrain$(EXEEXT): $(mdrain_OBJECTS) $(mdrain_DEPENDENCIES) 
-	@rm -f mdrain$(EXEEXT)
-	$(LINK) $(mdrain_OBJECTS) $(mdrain_LDADD) $(LIBS)
+msink$(EXEEXT): $(msink_OBJECTS) $(msink_DEPENDENCIES) 
+	@rm -f msink$(EXEEXT)
+	$(LINK) $(msink_OBJECTS) $(msink_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -209,7 +209,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mdrain.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/msink.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

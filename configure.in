@@ -2,11 +2,11 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.61)
-AC_INIT(mdrain, 0.1, Bernd.Jungblut@googlemail.com)
+AC_INIT(msink, 0.1, Bernd.Jungblut@googlemail.com)
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADER([config.h])
 
-AM_INIT_AUTOMAKE(mdrain, 0.1)
+AM_INIT_AUTOMAKE(msink, 0.1)
 
 # Checks for programs.
 AC_PROG_CC
