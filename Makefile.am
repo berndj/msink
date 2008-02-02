@@ -26,3 +26,9 @@ EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO
 ## Proceed to subdirs
 
 SUBDIRS = src
+
+clean-local:
+	rm -rf doc
+
+html-local:
+	doxygen Doxyfile
