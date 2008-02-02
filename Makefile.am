@@ -21,7 +21,7 @@ AUTOMAKE_OPTIONS = no-dependencies foreign dist-bzip2
 
 ACLOCAL_AMFLAGS = -I m4
 
-EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO 
+EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO Doxyfile
 
 ## Proceed to subdirs
 

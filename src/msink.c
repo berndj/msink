@@ -14,7 +14,9 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 
-
+/**
+ * Setup a multicast socket 
+ */
 int setupSocket(struct in_addr laddr_, struct sockaddr_in *msin_) {
   int fd;
   struct ip_mreq mreq;
@@ -51,6 +53,9 @@ int setupSocket(struct in_addr laddr_, struct sockaddr_in *msin_) {
 
 }
 
+/**
+ * Print command usage
+ */
 void printUsage(char *argv[]) {
   fprintf(stderr, "Usage: %s -m mcast-addr -p port [-b interface-addr] \n",
 	  basename(argv[0]));
@@ -60,7 +65,9 @@ void printUsage(char *argv[]) {
   fprintf(stderr, "  -h, --help\n");
 }
 
-
+/**
+ * Print version information
+ */
 void printVersion(char *argv[]) {
   fprintf(stderr, "%s version %s\n", argv[0], VERSION);
   fprintf(stderr,"Copyright (C) 2007  Bernd Jungblut\n");
@@ -69,6 +76,9 @@ void printVersion(char *argv[]) {
   fprintf(stderr,"the GNU General Public License.\n");
 }
 
+/**
+ * The main function  
+ */
 int main(int argc, char *argv[]) {
 
   int fd, opt;

@@ -158,7 +158,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = no-dependencies foreign dist-bzip2
 ACLOCAL_AMFLAGS = -I m4
-EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO 
+EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO Doxyfile
 SUBDIRS = src
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
